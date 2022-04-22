@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="REEのブログ　オタク知識に関するクイズ">
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link href="../css/style.css" rel="stylesheet">
+<link href="special.css" rel="stylesheet">
+<link rel="icon" type="image/jpg" href="../images/star.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+
+<title>オタク知識クイズ</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="start-header">
+            <a href="../index.html"><h1>REE NET</h1></a>
+            <div id="humburger"><img src="../images/humburger.png" alt="menu"></div>
+        </div>
+        <nav id="main-nav" class="">
+            <ul class="main-nav">
+                <li><a href="../homes/otakuHomes.html" id="japan">サブカル</a></li>
+                <li><a href="about-me.html">本・雑学</a></li>
+                <li><a href="blog.html">技術</a></li>
+                <li><a href="contact.html">旅行</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="article-all">
+        <h1>オタククイズ</h1>
+        <div id="question-all-panel">
+            <div id="question-panel">RUU</div>
+            <div class="box">
+                    <div id ="ans-panel">回答中</div>
+                    <div id ="next-panel" class="hidden">次の問題</div>
+            </div>
+            <div class="button-flex">
+                <button type="button" class="btn-sel">Primary</button>
+                <button type="button" class="btn-sel">Primary</button>
+                <button type="button" class="btn-sel">Primary</button>
+                <button type="button" class="btn-sel">Primary</button>
+            </div>
+        </div>
+    </article>
+    <footer class="footer">
+        <p><small>&copy; 2022 REE All Rights Reserved.</small></p>
+    </footer>
+    <script src="../scripts/jquery-3.4.1.min.js"></script>
+    <script>
+            'use strict';
+            const widthman = screen.width;
+            if(widthman < 600){
+                const panel = $('#main-nav');
+                panel.toggleClass("hidden");
+            }
+    
+            $(document).ready(function(){
+                $('#humburger').on('click',function(){
+                    $('#main-nav').toggleClass('hidden');
+                });
+            });
+    </script>
+    <script>
+        const quiz = [
+            {
+                question : "東方紅魔郷の1面のボスは誰？",
+                answers : ["ルーミア","チルノ","十六夜咲夜","秋穣子"],
+                correct : "ルーミア"
+            },
+            {
+                question : "東方妖々夢の5面のボスは誰？",
+                answers : ["十六夜咲夜","魂魄妖夢","西行寺幽々子","東風谷早苗"],
+                correct : "魂魄妖夢"
+            },
+            {
+                question : "東方永夜抄の2面のボスは誰？",
+                answers : ["橙","チルノ","ミスティア","多々良小傘"],
+                correct : "ミスティア"
+            },
+            {
+                question : "アニメ版ではチームスピカのメンバーであり、メジロ家の令嬢である、トウカイテイオーのライバルのウマ娘は誰？",
+                answers : ["メジロマックイーン","メジロドーベル","ゴールドシップ","シンボリルドルフ"],
+                correct : "メジロマックイーン"
+            },
+            {
+                question : "カイジに登場し、Eカードで負けて焼き土下座をした、帝愛のNo.2は誰？",
+                answers : ["一条","利根川","兵頭","班長"],
+                correct : "利根川"
+            },
+            {
+                question : "ホロライブ2期生のうち、アヒル声のASMRをしてドナルドと言われた人は誰？",
+                answers : ["舞元啓介","さくらみこ","大空スバル","YAGOO"],
+                correct : "大空スバル"
+            },
+            {
+                question : "アイドルマスターで765プロ所属。バストは72、イメージカラーは青、「...くっ」という口癖を持つ、これは誰？",
+                answers : ["如月千早","星井美希","高槻やよい","双海亜美"],
+                correct : "如月千早"
+            },
+            {
+                question : "にじさんじメンバーのうち、プログラマーで、リズムゲームが得意なオタクは誰？",
+                answers : ["ドーラ","葛葉","本間ひまわり","社築"],
+                correct : "社築"
+            },
+            {
+                question : "ぶらばん！、天神乱漫、サノバウィッチ、リドルジョーカーなどを発売したエロゲブランドは何？",
+                answers : ["ゆずソフト","サガプラネッツ","まどソフト","Key"],
+                correct : "ゆずソフト"
+            },
+            {
+                question : "くそみそテクニックの阿部さん名言で、バラライカの二次創作になっている曲名である、これは何",
+                answers : ["やらないか","きしめん","フタエのきわみ","ガチムチパンツレスリング"],
+                correct : "やらないか"
+            }
+        ]
+        const quizLength = quiz.length;
+        let quizIndex = 0;
+        
+
+        const anspanel = $("#ans-panel");
+        const button = document.getElementsByTagName("button");
+        const nextpanel = document.getElementById("next-panel");
+
+        let buttonLength = button.length;
+        const setupQuiz = function(){
+            document.getElementById("question-panel").textContent = quiz[quizIndex].question;
+            let buttonIndex=0;
+            while(buttonIndex < buttonLength){
+                button[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
+                buttonIndex++;
+            }
+            anspanel.text("回答中")
+        }
+
+        setupQuiz();
+
+        const clickHandler = function(e) {
+
+            if(quiz[quizIndex].correct === e.target.textContent){
+                anspanel.text("正解")
+                anspanel.removeClass("blue");
+                anspanel.addClass("red");
+            } else {
+                anspanel.text("不正解")
+                anspanel.removeClass("red");
+                anspanel.addClass("blue");
+            }
+            $("#next-panel").removeClass("hidden");
+            
+        };
+
+        let handlerIndex = 0;
+        while (handlerIndex < buttonLength){
+            button[handlerIndex].addEventListener('click',(e) => {
+                clickHandler(e);
+            });
+            handlerIndex++;
+        }
+
+        
+        nextpanel.addEventListener("click",(e) => {
+            quizIndex++;
+            if(quizIndex < quizLength){
+                $("#next-panel").addClass("hidden");
+                anspanel.removeClass("red");
+                anspanel.removeClass("blue");
+                setupQuiz();
+            } else {
+                window.alert("終了")
+            }
+        });
+
+    </script>
+</body>
+</html>

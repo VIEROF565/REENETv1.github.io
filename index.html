@@ -1,1 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="REEのブログ　アニメとかサブカルとか旅行とか技術とか">
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link href="css/style.css" rel="stylesheet">
+<link rel="icon" type="image/jpg" href="images/star.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+
+<title>REE Net</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="start-header">
+            <a href="index.html"><h1>REE NET</h1></a>
+            <div id="humburger"><img src="images/humburger.png" alt="menu"></div>
+        </div>
+        <nav id="main-nav" class="">
+            <ul class="main-nav">
+                <li><a href="homes/otakuHomes.html" id="japan">サブカル</a></li>
+                <li><a href="about-me.html">本・雑学</a></li>
+                <li><a href="blog.html">技術</a></li>
+                <li><a href="contact.html">旅行</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="article-all">
+        <h1 style="text-align:center;">REE NET</h1>
+        <div class="image"><img src="images/homeimage.jpg" alt="comet"></div>
+        <h3>新着記事</h3>
+            <ul class="whats-new-nav">
+                <a href="otaku-kuizu/otaku-kuizu.html"><li><div>オタク関連のクイズを作ってみた</div><span>2022-4-23</span></li></a>
+                <a href="anime-blog/anime-blog.html"><li><div>今までに見たアニメを掲載</div><span>2022-4-23</span></li></a>
+                <a href="koudoukeizai/koudoukeizai.html"><li><div>行動経済学の本の紹介ブログを掲載</div><span>2022-4-23</span></li></a>
+                <a href="teikoku_travel/teikoku_travel.html"><li><div>帝国ホテルの感想ブログを掲載</div><span>2022-4-23</span></li></a>
+                <a href="index.html"><li><div>ホームページリニューアル</div><span>2022-4-23</span></li></a>
+            </ul>
+        <h3>カテゴリ</h3>
+        <h3>プロフィール</h3>
+            <div class="image"><img src="images/VIERKO.png" alt="VIERKO"></div>
+            <p>REEです。コンピュータサイエンス勉強してました。オタクです。趣味はアニメ、ゲーム、動画鑑賞、旅行です。</p>
+    </article>
+
+    <footer class="footer">
+        <p><small>&copy; 2022 REE All Rights Reserved.</small></p>
+    </footer>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        'use strict';
+        const widthman = screen.width;
+        if(widthman < 600){
+            const panel = $('#main-nav');
+            panel.toggleClass("hidden");
+        }
+
+        $(document).ready(function(){
+            $('#humburger').on('click',function(){
+                $('#main-nav').toggleClass('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

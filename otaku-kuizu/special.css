@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+.hidden {
+    display:none;
+}
+.red{
+    color:red;
+}
+.blue{
+    color:blue;
+}
+/*クイズの部分*/
+#question-all-panel{
+    border: 1px #000000 solid;
+    border-radius: 5px;
+    background-color: #aaaaaa;
+    padding-top:3rem;
+}
+#question-panel{
+    border: 1px #000000 solid;
+    background-color:#64e386;
+    border-radius: 5px;
+    text-align: center;
+    margin-left:1rem;
+    margin-right:1rem;
+    padding:1rem;
+}
+.box{
+    display:flex;
+    justify-content: space-between;
+}
+#ans-panel,#next-panel {
+    border:1px #000000 solid;
+    border-radius:5px;
+    background: #ffffff;
+    width:30%;
+    text-align: center;
+    margin-left:1rem;
+    margin-right: 1rem;
+    margin-top:1rem;
+    padding-top:1rem;
+    padding-bottom: 1rem;
+}
+#next-panel:hover{
+    cursor: pointer;
+    background-color:#d6d66d;
+}
+.button-flex{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:26px;
+    margin-left:1rem;
+    margin-right:1rem;
+    margin-top:3rem;
+    margin-bottom:3rem;
+}
+.btn-sel {
+    width:100%;
+    padding:2px;
+    border:1px #000000 solid;
+    border-radius:5px;
+    background:#22cccc;
+    padding-top:1rem;
+    padding-bottom:1rem;
+}
