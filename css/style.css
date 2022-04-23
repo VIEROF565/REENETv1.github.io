@@ -137,6 +137,21 @@ img {
     margin-left:2rem;
     list-style: disc;
 }
+/*カテゴリの部分*/
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:26px;
+}
+@media(max-width: 600px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
+.item{
+    display: inline-block;
+}
+
 
 /*Footerの部分*/
 .footer{
@@ -145,4 +160,9 @@ img {
     text-align:center;
     padding:5px;
     margin-top:0px;
+}
+.footer a:hover, .footer a:visited, .footer a:link, .footer a:active{
+    color:#ffffff;
+    font-family: 'Cinzel', serif;
+    font-family: 'Roboto Mono', monospace;
 }

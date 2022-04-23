@@ -1,0 +1,1 @@
+document.write('<footer class="footer"><nav><a href="../legal.html"><p>プライバシーポリシー・免責事項</p></a><a href="https://docs.google.com/forms/d/e/1FAIpQLScZqzJj41DhG6TyzcabqDxu-ARj9B3pPMVyS4zFDUR9k5izGg/viewform?usp=sf_link"><p>お問い合わせ</p></a></nav><p><small>&copy; 2022 REE All Rights Reserved.</small></p></footer>');

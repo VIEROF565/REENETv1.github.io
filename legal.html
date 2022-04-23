@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="REEのブログ　プライバシーポリシーと免責事項">
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link href="css/style.css" rel="stylesheet">
+<link rel="icon" type="image/jpg" href="/images/star.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+
+<title>プライバシーポリシーと免責事項</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="start-header">
+            <a href="index.html"><h1>REE NET</h1></a>
+            <div id="humburger"><img src="images/humburger.png" alt="menu"></div>
+        </div>
+        <nav id="main-nav" class="">
+            <ul class="main-nav">
+                <li><a href="homes/otakuHomes.html" id="japan">サブカル</a></li>
+                <li><a href="homes/studyHomes.html">本・雑学</a></li>
+                <li><a href="homes/techHomes.html">技術</a></li>
+                <li><a href="homes/travelHomes.html">旅行</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="article-all">
+        <h1>プライバシーポリシーと免責事項</h1>
+        <h2>プライバシーポリシー</h2>
+        <h3>個人情報の利用目的</h3>
+        <p>当サイトはお問い合わせや記事へのコメントの際、 名前やメールアドレス等の個人情報を入力いただく場合がございます。 取得した個人情報は、お問い合わせに対する回答や必要な情報を電子メールなどをでご連絡する場合に利用させていただくものであり、 これらの目的以外では利用いたしません</p>
+        <h3>プライバシーポリシーの変更について</h3>
+        <p>当サイトは、個人情報に関して適用される日本の法令を遵守するとともに、本ポリシーの内容を適宜見直しその改善に努めます。 修正された最新のプライバシーポリシーは常に本ページにて開示されます。</p>
+        <h2>免責事項</h2>
+        <p>当サイトからリンクやバナーなどによって他のサイトに移動された場合、移動先サイトで提供される情報、サービス等について一切の責任を負いません。
+
+            当サイトのコンテンツ・情報につきまして、可能な限り正確な情報を掲載するよう努めておりますが、誤情報が入り込んだり、情報が古くなっていることもございます。
+            
+            当サイトに掲載された内容や提供しているサービスにより生じた損害等の一切の責任を負いかねますのでご了承ください。</p>
+        <h2>著作権</h2>
+        <p>当サイト内のコンテンツ（文章、イラスト、画像、その他）の著作権は、著作権法によって権利が守られています。 それらのコンテンツを管理者の許諾無く無断で使用・複製・改変・公開及び領布することを一切禁止します。</p>
+    </article>
+    
+    <footer class="footer">
+        <nav>
+            <a href="legal.html"><p>プライバシーポリシー・免責事項</p></a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScZqzJj41DhG6TyzcabqDxu-ARj9B3pPMVyS4zFDUR9k5izGg/viewform?usp=sf_link"><p>お問い合わせ</p></a>
+        </nav>
+        <p><small>&copy; 2022 REE All Rights Reserved.</small></p>
+    </footer>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        'use strict';
+        const widthman = screen.width;
+        if(widthman < 600){
+            const panel = $('#main-nav');
+            panel.toggleClass("hidden");
+        }
+
+        $(document).ready(function(){
+            $('#humburger').on('click',function(){
+                $('#main-nav').toggleClass('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
